@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  
+</head>
+
+<body>
+  <div class="everything">
+
+    <div class="top">
+      <img src="./images/logo.svg">
+      <div class="score">
+        <p>SCORE</p>
+        <div class="active-score" id="score">0</div>
+      </div>
+    </div>
+
+    <!-- First Screen - Shows Game Choices -->
+    <div class="rps-game" id="game">
+      <div class="game-option" onclick="playerPicks(1)">
+        <div class="outer-circle" id="paper">
+          <div class="inner-circle">
+            <img src="./images/icon-paper.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="game-option" onclick="playerPicks(2)">
+        <div class="outer-circle" id="scissors">
+          <div class="inner-circle">
+            <img src="./images/icon-scissors.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="game-option" onclick="playerPicks(0)">
+        <div class="outer-circle" id="rock">
+          <div class="inner-circle">
+            <img src="./images/icon-rock.svg">
+          </div>
+        </div>
+      </div>
+
+      <div class="behind-triangle">
+        <img src="./images/bg-triangle.svg">
+      </div>
+    </div>
+
+    <!-- Second Screen - Shows Game Results -->
+    <div class="rps-result" id="result-screen">
+      
+      <div class="player-choice">
+        <h3>YOU PICKED</h3>
+        <div class="outer-circle" id="player-circle">
+          <div class="inner-circle">
+            <img src="./images/icon-rock.svg" alt="player choice" id="player-image">
+          </div>
+        </div>
+      </div>
+
+      <div class="mid-text">
+        <div class="result" id="game-announcement">You .....</div>
+        <button class="play-again" onclick="playAgain()"> PLAY AGAIN</button>
+      </div>
+
+      <div class="computer-choice">
+        <h3>THE HOUSE PICKED</h3>
+        <div class="outer-circle" id="computer-circle">
+          <div class="inner-circle" id="inner-comp-circle">
+            <img src="./images/icon-rock.svg" alt='computer choice' id="computer-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Rules screen (Pop-up) -->
+  <div class="rules-button" onclick="rulesDisplay()">
+    RULES
+  </div>
+
+  <div class="rules-info" id="rules">
+    <div class="rules-info-top">
+      <h1>RULES</h1>
+      <button onclick="rulesDisplay()">x</button>
+    </div>
+      <img src="./images/image-rules.svg"></image>
+      <script src="game.js"></script>
+  </div>
+</body>
+
+</html>
